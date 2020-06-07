@@ -1,0 +1,59 @@
+/* MILHA EXTRA */
+
+.success-modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  transition: opacity 200ms ease;
+  opacity: 0;
+  display: none;
+}
+
+@keyframes show {
+  0% {
+      display: none;
+      opacity: 0;
+  }
+  1% {
+      display: flex;
+  }
+  100% {
+      display: flex;
+      opacity: 1;
+  }
+}
+
+.success-modal-background.show {
+  display: flex;
+  animation: show 200ms ease;
+  animation-fill-mode: forwards;
+}
+
+.success-modal-background .success-modal-box {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-modal-background .success-modal-box svg {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+.success-modal-background .success-modal-box span {
+  font-size: 24px;
+  font-family: Roboto;
+  color: #E1FAEC;
+}
+
